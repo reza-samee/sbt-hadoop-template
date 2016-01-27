@@ -1,0 +1,18 @@
+
+
+$ sudo apt-get install ssh
+$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+$ ssh localhost
+
+
+$ hdfs namenode -format
+$ start-dfs.sh
+$ start-yran.sh
+$ mr-jobhistory-daemon.sh start historyserver
+
+$ mr-jobhistory-daemon.sh stop historyserver
+$ stop-yarn.sh
+$ stop-dfs.sh
+
+$ hadoop fs -mkdir -p /user/$USER
